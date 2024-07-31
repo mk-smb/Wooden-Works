@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooden-Works-Furniture</title>
+    <!-- Google-fonts = "Catamaran" -->
+    <link rel="stylesheet" href="/Wooden-Works/fonts/Catamaran/Catamaran-VariableFont_wght.ttf">
+    <link rel="stylesheet" href="/Wooden-Works/fonts/Poppins/Poppins-ExtraBold.ttf">
+    <link rel="stylesheet" href="/Wooden-Works/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf">
+    <!-- Fontawesome 6.5.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Owl-carousel 2.3.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Alpine JS 3.14.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.14.1/cdn.js"></script>
+    <!-- Custom -->
+    <link rel="stylesheet" href="assets/css/output.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="container mx-auto flex flex-col lg:flex-row justify-around lg:items-center relative" x-data="{ showNavbar: false, showSidebar: false }">
+        <div class="flex items-center justify-between w-full lg:w-auto relative">
+            <a href="#" id="logo" class="flex items-center justify-between text-xl md:text-3xl font-extrabold text-primary py-2">
+                <img src="assets/images/logo.svg" alt="BhatiSalon Logo" class="h-[50px] w-[50px] md:h-[90px] md:w-[75px]">
+                Shiva Furnitures
+            </a>
+            <button class="lg:hidden block text-gray-900 ml-4" @click="showSidebar = !showSidebar"
+                aria-label="Toggle sidebar">
+                <i class="fas fa-ellipsis-v fa-xl"></i>
+            </button>
+        </div>
+        <ul
+            class="hidden lg:block text-black lg:flex lg:space-x-16 lg:items-center tracking-wider text-sm font-medium uppercase">
+            <li><a href="#" class="">Home</a></li>
+            <li><a href="#" class="">About Us</a></li>
+            <li><a href="#" class="">Our Services</a></li>
+            <li><a href="#" class="">Our Portfolio</a></li>
+            <li>
+                <a href="#"
+                    class="inline-block px-7 py-4 bg-primary text-xs text-white font-bold transition-all duration-500 hover:bg-accent hover:text-[#F5F5DC]">Book
+                    Contact Us
+                </a>
+            </li>
+        </ul>
+        <div :class="{ 'translate-x-0': showSidebar, '-translate-x-full': !showSidebar }"
+            class="fixed inset-y-0 left-0 w-64 bg-black text-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+            <div class="p-4">
+                <button @click="showSidebar = false" class="text-white">
+                    <i class="fas fa-times fa-lg"></i>
+                </button>
+            </div>
+            <ul class="mt-5 tracking-wider space-y-4 text-sm font-medium uppercase">
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Home</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">About Us</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Our Services</a></li>
+                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Our Portfolio</a></li>
+                <li>
+                    <a href="#" class="block px-4 py-2 bg-primary text-white  hover:bg-accent">
+                       Contact Us Now
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+
+    <!-- footer -->
+    <footer class="text-white py-3 bg-black">
+        <div class="container mx-auto py-4">
+            <div class="md:flex justify-between text-xs md:text-lg">
+                <p class="tracking-wide">
+                    Copyright Powered by Shiva Furnitures
+                </p>
+                <p>
+                    Made with <i class="fas fa-heart text-red-500"></i> by  <a href="https://spreadmybusiness.in/"
+                    class="transition-all text-white duration-300 hover:text-accent">SpreadMyBusiness</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
