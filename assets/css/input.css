@@ -5,14 +5,8 @@
 
 @layer base{
     body{
-        font-family: "Catamaran", "sans-serif";
+        font-family: "Jost", "sans-serif";
         background-color: #eee;
-    }
-
-    /*  */
-    /* @import ; */
-    nav > a#logo{
-        font-family: url('/Wooden-Works/fonts/Poppins/Poppins-ExtraBold.ttf');
     }
 }
 

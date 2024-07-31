@@ -1,11 +1,31 @@
 $(".testimonial-carousel").owlCarousel({
-    items: 1,
     // nav: true,
     dots: true,
     margin: 20,
     loop: true,
     autoplay: true,
+    responsive: {
+      0: {
+          items: 1 
+      },
+      768: {
+          items: 2 
+      },
+      1024: {
+          items: 3  
+      }
+  }
 });
+
+var owl1 = $('.testimonial-carousel');
+owl1.owlCarousel();
+$('.review-next-btn').click(function() {
+    owl1.trigger('next.owl.carousel', [300]);
+})
+// Go to the previous item
+$('.review-prev-btn').click(function() {
+    owl1.trigger('prev.owl.carousel', [300]);
+})
 
 // banner-carousel
 $(".banner-carousel").owlCarousel({
