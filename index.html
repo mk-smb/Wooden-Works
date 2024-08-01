@@ -22,34 +22,29 @@
 </head>
 
 <body>
+
     <!-- navbar -->
-    <nav class="container mx-auto flex flex-col lg:flex-row justify-around lg:items-center relative" x-data="{ showNavbar: false, showSidebar: false }">
+    <nav class="container mx-auto flex flex-col lg:flex-row justify-around lg:items-center relative" x-data="{ showSidebar: false }">
         <div class="flex items-center justify-between w-full lg:w-auto relative">
             <a href="#" id="logo" class="flex items-center justify-between text-xl md:text-3xl font-extrabold text-primary">
-                <img src="assets/images/logo.svg" alt="BhatiSalon Logo" class="h-[50px] w-[50px] md:h-[90px] md:w-[75px]">
+                <img src="assets/images/logo.svg" alt="Shiva Furnitures Logo" class="h-[50px] w-[50px] md:h-[90px] md:w-[75px]">
                 Shiva Furnitures
             </a>
-            <button class="lg:hidden block text-gray-900 ml-4" @click="showSidebar = !showSidebar"
-                aria-label="Toggle sidebar">
-                <!-- <i class="fas fa-ellipsis-v fa-xl"></i> -->
-                 <img src="assets/images/5036960.png" alt="" class="w-6">
+            <button class="lg:hidden block text-gray-900 ml-4" @click="showSidebar = !showSidebar" aria-label="Toggle sidebar">
+                <img src="assets/images/5036960.png" alt="" class="w-6">
             </button>
         </div>
-        <ul
-            class="hidden lg:block text-black lg:flex lg:space-x-16 lg:items-center tracking-wider text-sm font-medium uppercase">
+        <ul class="hidden lg:block text-black lg:flex lg:space-x-16 lg:items-center tracking-wider text-sm font-medium uppercase">
             <li><a href="#" class="transition-all duration-500 hover:text-primary">Home</a></li>
             <li><a href="#" class="transition-all duration-500 hover:text-primary">About Us</a></li>
             <li><a href="#" class="transition-all duration-500 hover:text-primary">Our Services</a></li>
             <li><a href="#" class="transition-all duration-500 hover:text-primary">Our Portfolio</a></li>
             <li>
-                <a href="#"
-                    class="inline-block px-7 py-4 bg-primary text-xs text-white font-bold transition-all duration-500 hover:bg-accent hover:text-[#F5F5DC]">Book
-                    Contact Us
-                </a>
+                <a href="#" class="inline-block px-7 py-4 bg-primary text-xs text-white font-bold transition-all duration-500 hover:bg-accent hover:text-[#F5F5DC]">Contact Us</a>
             </li>
         </ul>
-        <div :class="{ 'translate-x-0': showSidebar, '-translate-x-full': !showSidebar }"
-            class="fixed inset-y-0 left-0 w-64 bg-black text-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+        <div :class="{ 'translate-x-0': showSidebar, '-translate-x-full': !showSidebar }" 
+             class="fixed inset-y-0 left-0 w-64 bg-black text-white shadow-lg transform -translate-x-full transition-transform duration-300 z-50 lg:hidden">
             <div class="p-4">
                 <button @click="showSidebar = false" class="text-white">
                     <i class="fas fa-times fa-lg"></i>
@@ -60,19 +55,15 @@
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">About Us</a></li>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Our Services</a></li>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Our Portfolio</a></li>
-                <li>
-                    <a href="#" class="block px-4 py-2 bg-primary text-white  hover:bg-accent">
-                       Contact Us Now
-                    </a>
-                </li>
+                <li><a href="#" class="block px-4 py-2 bg-primary text-white hover:bg-accent">Contact Us Now</a></li>
             </ul>
         </div>
     </nav>
-
+    
     <!-- banner -->
-     <section class="h-[50vh] md:[75vh] lg:h-[100vh] relative after:absolute after:inset-0 after:bg-black/50" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/olive-green-07-1508175904.jpg');background-size: cover;background-position: center;background-repeat: no-repeat;background-attachment: fixed;">
+    <section class="h-[50vh] md:h-[75vh] lg:h-[100vh] relative after:absolute after:inset-0 after:bg-black/50 z-0" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/olive-green-07-1508175904.jpg');background-size: cover;background-position: center;background-repeat: no-repeat;background-attachment: fixed;">
         <div class="container mx-auto text-white border">
-            <div class="absolute z-50 top-1/2 -translate-y-1/2">
+            <div class="absolute z-10 top-1/2 -translate-y-1/2">
                 <h1 class="text-xl md:text-4xl lg:text-6xl font-extrabold tracking-wide">SHIVA WOODEN WORKS & FURNITURES</h1>
                 <div class="flex gap-5 md:gap-10 mt-2">
                     <p class="text-sm md:text-lg font-bold uppercase text-gray-300 before:border-l-4 before:me-2 before:border-primary">furnitures</p>
@@ -80,7 +71,8 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
+    
 
      <!-- services -->
      <section class="my-10">
@@ -372,20 +364,56 @@
     </section> 
 
      <!-- contact us -->
-      <section>
-        
-      </section>
+     <section class="bg-gray-100 py-12">
+        <div class="container mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-primary">Contact Us</h2>
+                <p class="mt-2 text-gray-700">Get in touch with us for your wooden works and furniture needs.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="flex items-center">
+                    <img src="assets/images/contact-us.jpg" alt="Contact Us" class="w-full h-auto object-cover rounded">
+                </div>
+                <div class="bg-white p-10 rounded shadow-lg flex items-center">
+                    <form action="#" method="POST" class="w-full">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="phone_no" class="block text-gray-700 font-bold mb-2">Your Phone Number</label>
+                            <input type="number" id="phone_no" name="phone_no" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit"
+                                class="inline-block px-6 py-3 bg-primary text-white font-bold uppercase hover:bg-accent transition duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>        
+        </div>
+     </section>
+    
 
     <!-- footer -->
     <footer class="text-white py-3 bg-black">
         <div class="container mx-auto py-4">
             <div class="md:flex justify-between text-xs md:text-lg">
                 <p class="tracking-wide">
-                    Copyright Powered by Shiva Furnitures
+                   &copy; Copyright Powered by Shiva Furnitures
                 </p>
                 <p>
                     Made with <i class="fas fa-heart text-red-500"></i> by  <a href="https://spreadmybusiness.in/"
-                    class="transition-all text-white duration-300 hover:me-2 text-accent">SpreadMyBusiness</a>
+                    class="transition-all text-white duration-300  hover:text-accent">SpreadMyBusiness</a>
                 </p>
             </div>
 
@@ -395,5 +423,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 
 </html>
